@@ -2,10 +2,14 @@
 
 <table>
   <tr>
+    <th>Title</th>
+    <th>Description</th>
   </tr>
 
 <% @notes.each do |note| %>
   <tr>
+    <td><%=h note.title %></td>
+    <td><%=h note.description %></td>
     <td><%= link_to 'Show', note %></td>
     <td><%= link_to 'Edit', edit_note_path(note) %></td>
     <td><%= link_to 'Destroy', note, :confirm => 'Are you sure?', :method => :delete %></td>
